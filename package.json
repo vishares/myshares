@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node http.js"
+    "start": "node http.js --websocket-port=$OPENSHIFT_NODEJS_PORT --log-level=1"
   },
   "main":"http.js",
   "private": true,
