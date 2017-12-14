@@ -147,6 +147,7 @@ app.get("/getTopTraded", (req, res) => {
     })
     
 
-app.listen(8080, () => {
+app.listen(server_port, server_ip_address,, () => {
     console.log("listening");
+    console.log( "Listening on " + server_ip_address + ", port " + server_port 
 })
