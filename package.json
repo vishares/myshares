@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node http.js"
   },
+  "main":"http.js",
   "private": true,
   "dependencies": {
     "async": "^2.6.0",
