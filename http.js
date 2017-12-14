@@ -5,7 +5,8 @@ var express = require("express");
 var fs = require("fs");
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
-
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 finalResponse = [];
 var app = express();
 
@@ -147,7 +148,7 @@ app.get("/getTopTraded", (req, res) => {
     })
     
 
-app.listen(server_port, server_ip_address,, () => {
+app.listen(server_port, server_ip_address, () => {
     console.log("listening");
-    console.log( "Listening on " + server_ip_address + ", port " + server_port 
+    console.log( "Listening on " + server_ip_address + ", port " + server_port )
 })
