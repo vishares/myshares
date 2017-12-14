@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node http.js --websocket-port=$OPENSHIFT_NODEJS_PORT --log-level=1"
+    "start": "node server.js --websocket-port=$OPENSHIFT_NODEJS_PORT --log-level=1"
   },
-  "main":"http.js",
+  "main":"server.js",
   "private": true,
   "dependencies": {
     "async": "^2.6.0",
