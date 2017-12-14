@@ -1,0 +1,68 @@
+{
+  "data": [
+    {
+      "Exch": "N",
+      "ExchType": "C",
+      "ScripCode": 13528,
+      "ClientLoginType": 0,
+      "RefreshRate": "H",
+      "Count": 1,
+      "LastRequestTime": "/Date(1513095138956)/",
+      "FullName": "GMRINFRASTRUCTURELTD."
+    },
+    
+    {
+      "Exch": "N",
+      "ExchType": "C",
+      "ScripCode": 11460,
+      "ClientLoginType": 0,
+      "RefreshRate": "H",
+      "Count": 1,
+      "LastRequestTime": "/Date(1513095138959)/",
+      "FullName": "JAIPRAKASHASSOCIATESLTD"
+    },
+    {
+      "Exch": "N",
+      "ExchType": "C",
+      "ScripCode": 11763,
+      "ClientLoginType": 0,
+      "RefreshRate": "H",
+      "Count": 1,
+      "LastRequestTime": "/Date(1513095138960)/",
+      "FullName": "JAIPRAKASHPOWERVEN.LTD"
+    },
+    {
+      "Exch": "N",
+      "ExchType": "C",
+      "ScripCode": 3594,
+      "ClientLoginType": 0,
+      "RefreshRate": "H",
+      "Count": 1,
+      "LastRequestTime": "/Date(1513095138964)/",
+      "FullName": "UNITECHLTD"
+    },
+   
+ 
+    {
+      "Exch": "N",
+      "ExchType": "C",
+      "ScripCode": 5948,
+      "ClientLoginType": 0,
+      "RefreshRate": "H",
+      "Count": 1,
+      "LastRequestTime": "/Date(1513095138962)/",
+      "FullName": "THESOUTHINDIANBANKLTD"
+    },
+    {
+      "Exch": "N",
+      "ExchType": "C",
+      "ScripCode": 12018,
+      "ClientLoginType": 0,
+      "RefreshRate": "H",
+      "Count": 1,
+      "LastRequestTime": "/Date(1513095138963)/",
+      "FullName": "SUZLONENERGYLIMITED"
+    }
+  
+  ]
+}

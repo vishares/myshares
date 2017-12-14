@@ -1,0 +1,530 @@
+var request = require("request")
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+data = {
+    "d": [
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "11763",
+            "ScripName": "JPPOWER",
+            "BuySell": "S",
+            "lQty": 4000,
+            "AtMarket": "N",
+            "Rate": "7.15",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 4000,
+            "AvgTradeRate": "7.15",
+            "strCurrStatus": "Fully Executed",
+            "lPendingQty": 0,
+            "BrokerOrderId": 10456006,
+            "sExchOrderId": "1100000002346276",
+            "sExchOrderTime": "12/12/2017 12:00:14",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "42583",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "",
+            "sCategory": "C"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "11460",
+            "ScripName": "JPASSOCIAT",
+            "BuySell": "B",
+            "lQty": 2000,
+            "AtMarket": "N",
+            "Rate": "17.55",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Cancelled",
+            "lPendingQty": 2000,
+            "BrokerOrderId": 10455781,
+            "sExchOrderId": "1100000002549260",
+            "sExchOrderTime": "12/12/2017 11:53:44",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "42583",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "",
+            "sCategory": "C"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "11763",
+            "ScripName": "JPPOWER",
+            "BuySell": "S",
+            "lQty": 4000,
+            "AtMarket": "N",
+            "Rate": "7.00",
+            "WithSL": "Y",
+            "SLTriggerRate": "7.05",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Cancelled",
+            "lPendingQty": 4000,
+            "BrokerOrderId": 10453505,
+            "sExchOrderId": "1100000002436979",
+            "sExchOrderTime": "12/12/2017 11:38:51",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "42583",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "",
+            "sCategory": "C"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "11763",
+            "ScripName": "JPPOWER",
+            "BuySell": "B",
+            "lQty": 4000,
+            "AtMarket": "N",
+            "Rate": "7.15",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 4000,
+            "AvgTradeRate": "7.15",
+            "strCurrStatus": "Fully Executed",
+            "lPendingQty": 0,
+            "BrokerOrderId": 10450231,
+            "sExchOrderId": "1100000002341564",
+            "sExchOrderTime": "12/12/2017 11:18:57",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "42583",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "",
+            "sCategory": "C"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "12026",
+            "ScripName": "RENUKA",
+            "BuySell": "B",
+            "lQty": 100000,
+            "AtMarket": "N",
+            "Rate": "17.00",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 100000,
+            "BrokerOrderId": 10412591,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs850000, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "12026",
+            "ScripName": "RENUKA",
+            "BuySell": "B",
+            "lQty": 10000,
+            "AtMarket": "N",
+            "Rate": "17.00",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 10000,
+            "BrokerOrderId": 10412586,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs85000, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "12026",
+            "ScripName": "RENUKA",
+            "BuySell": "B",
+            "lQty": 10000,
+            "AtMarket": "N",
+            "Rate": "16.85",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 10000,
+            "BrokerOrderId": 10412583,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs84250, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "12026",
+            "ScripName": "RENUKA",
+            "BuySell": "B",
+            "lQty": 10000,
+            "AtMarket": "N",
+            "Rate": "16.85",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 10000,
+            "BrokerOrderId": 10412563,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs84250, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "12026",
+            "ScripName": "RENUKA",
+            "BuySell": "B",
+            "lQty": 10000,
+            "AtMarket": "N",
+            "Rate": "16.85",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 10000,
+            "BrokerOrderId": 10412562,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs84250, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "15379",
+            "ScripName": "BALLARPUR",
+            "BuySell": "B",
+            "lQty": 1000000,
+            "AtMarket": "Y",
+            "Rate": "14.45",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 1000000,
+            "BrokerOrderId": 10412561,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs8308750, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "15379",
+            "ScripName": "BALLARPUR",
+            "BuySell": "B",
+            "lQty": 100000,
+            "AtMarket": "N",
+            "Rate": "14.00",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 100000,
+            "BrokerOrderId": 10412560,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs700000, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "12026",
+            "ScripName": "RENUKA",
+            "BuySell": "B",
+            "lQty": 10000,
+            "AtMarket": "N",
+            "Rate": "16.85",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 10000,
+            "BrokerOrderId": 10412554,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs84250, while available margin is Rs20821.36",
+            "sCategory": "D"
+        },
+        {
+            "__type": "Custom+ReportOrdertype",
+            "isModify": "Modifyno",
+            "isCancel": "Cancelno",
+            "Exch": "N",
+            "ExchType": "C",
+            "ScripCode": "11460",
+            "ScripName": "JPASSOCIAT",
+            "BuySell": "B",
+            "lQty": 10000,
+            "AtMarket": "N",
+            "Rate": "17.45",
+            "WithSL": "N",
+            "SLTriggerRate": "0.00",
+            "SLTriggered": "N",
+            "TradedQty": 0,
+            "AvgTradeRate": "0.00",
+            "strCurrStatus": "Rejected By 5P",
+            "lPendingQty": 10000,
+            "BrokerOrderId": 10412548,
+            "sExchOrderId": "0",
+            "sExchOrderTime": "01/01/1980",
+            "sOrderRequesterCode": "50943954       ",
+            "LocalOrderid": "0",
+            "sTerminalID": "0",
+            "m_MarketLot": 1,
+            "sDelvIntra": "I",
+            "sOrdervalidity": "DAY",
+            "sValidityUpto": "",
+            "sDisclosedQty": 0,
+            "sSeries": "EQ",
+            "sReason": "Order rejected by RMS as margin required is Rs43625, while available margin is Rs20821.36",
+            "sCategory": "C"
+        }
+    ]
+}
+
+let headers = {
+    "Content-Type": "application/json"
+}
+finalAmount = 0;
+getOrderData = {
+    url: "https://trade.5paisa.com/Trade/Reports.asmx/GetOrderBookReport", body: JSON.stringify({
+        "sClientCode": "50943954"
+    }),
+
+
+    headers: headers
+}
+
+getNetposition = {
+    url: "https://swaraj.5paisa.com/Mob/Service1.svc/NetPosition", body: "50943954", headers: {
+        "UserID": "ZyT47UW2g56",
+        "Password": "H98qlU4Sn2",
+        "Content-Type": "application/json",
+        "host": "okhttp/3.9.0",
+        "cookie": "5paisacookie=kf0sgok3p4skljsp0py1oeik; path=/; httponly=",
+        "host": "swaraj.5paisa.com",
+    },
+
+
+
+}
+request.post(getOrderData,
+    function (error, response, data) {
+        console.log(response.statusCode)
+        if (!error && response.statusCode == 200) {
+
+            data = JSON.parse(data);
+            console.log(data);
+
+            executedOrders = data.d.filter((data) => data.strCurrStatus == "Fully Executed");
+
+            executedScrip = {}; executedOrders.forEach(data => {
+                if (executedScrip.hasOwnProperty(data.ScripName)) {
+                    executedScrip[data.ScripName]++;
+                } else {
+                    executedScrip[data.ScripName] = 1;
+                }
+            })
+
+            console.log(executedOrders.length);
+            console.log(executedScrip);
+            request.post(getNetposition,
+                function (error, response, data) {
+                    if (!error && response.statusCode == 200) {
+
+                        data = JSON.parse(data);
+                        var brokerage = 0;
+
+                        for (b in executedScrip) { brokerage += executedScrip[b] * 10 }
+
+
+
+                        for (i = 0; i <= data.NetPositionDetail.length - 1; i++) {
+                            var totalCharges = 0;
+                            var netPosition = data.NetPositionDetail[i];
+
+
+                            var turnOver = netPosition.SellValue + netPosition.BuyValue
+
+                            tempbrokerage = executedScrip[netPosition.ScripName] * 10;
+
+                            totalCharges += tempbrokerage + turnOver * 0.0000315;
+
+                            totalCharges += netPosition.SellValue * 0.00025 + (totalCharges * 0.18) + turnOver * 0.00006 + turnOver * 0.0000015;
+                            totalAmount = Math.round((netPosition.SellValue - netPosition.BuyValue)) - totalCharges;
+                            console.log(`${netPosition.ScripName} : ${totalAmount} :${totalCharges}`)
+                            finalAmount += totalAmount;
+                        }
+
+                    }
+                    console.log(finalAmount);
+                }
+            );
+
+        }
+    })
