@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "node http-sse.js"
+    "start": "node http.js"
   },
   "private": true,
   "dependencies": {

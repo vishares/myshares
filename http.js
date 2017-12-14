@@ -53,7 +53,7 @@ var finalResult
 app.get("/", (req, res) => {
 
 
-
+console.log(req.url);
     responseObj = res;
     fs.readFile("./scrips.json", (err, body) => {
         let urls = JSON.parse(body.toString()).data;
