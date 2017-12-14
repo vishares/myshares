@@ -7,6 +7,8 @@ var fs = require("fs");
 let sseExpress = require('sse-express');
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 finalResponse = [];
 var app = express();
@@ -162,6 +164,6 @@ app.get("/getTopTraded", (req, res) => {
     })
     
 
-app.listen(8080, () => {
+app.listen(port, () => {
     console.log("listening");
 })
